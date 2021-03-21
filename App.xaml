@@ -1,0 +1,19 @@
+﻿<Application x:Class="WPF_Bookshelf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPF_Bookshelf"
+             xmlns:t="clr-namespace:WPF_Bookshelf.ViewModels"
+             xmlns:k="clr-namespace:WPF_Bookshelf.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type t:BookListViewModel}">
+                <k:BookListView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type t:BookDialogViewModel}">
+                <k:BookDialogView/>
+            </DataTemplate>
+            <!-- Dummy Style, anything you won't use goes -->
+            <Style TargetType="{x:Type Rectangle}" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
